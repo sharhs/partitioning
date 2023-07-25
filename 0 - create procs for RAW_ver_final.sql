@@ -1,4 +1,4 @@
-USE [MDWH_RAW]
+USE []
 GO
 
 /****** Object:  StoredProcedure [dbo].[pf_create_columnstore_indexes_for_trans]    Script Date: 21.06.2022 15:37:30 ******/
@@ -51,7 +51,7 @@ SELECT @log_id = MAX(lh.log_id) FROM log_headlog lh
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'начали. параметры: ' + @table  + ', ' + @ps_name  , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г­Г Г·Г Г«ГЁ. ГЇГ Г°Г Г¬ГҐГІГ°Г»: ' + @table  + ', ' + @ps_name  , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -257,7 +257,7 @@ END
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'закончили', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г§Г ГЄГ®Г­Г·ГЁГ«ГЁ', OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -323,7 +323,7 @@ SELECT @log_id = MAX(lh.log_id) FROM log_headlog lh
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'начали. параметры: ' + @table  + ', ' + @ps_name  , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г­Г Г·Г Г«ГЁ. ГЇГ Г°Г Г¬ГҐГІГ°Г»: ' + @table  + ', ' + @ps_name  , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -376,7 +376,7 @@ EXEC (@tblcr)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'создали темповую таблицу ' + @table_tmp, OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г±Г®Г§Г¤Г Г«ГЁ ГІГҐГ¬ГЇГ®ГўГіГѕ ГІГ ГЎГ«ГЁГ¶Гі ' + @table_tmp, OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -557,7 +557,7 @@ END
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'конец', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'ГЄГ®Г­ГҐГ¶', OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -631,7 +631,7 @@ SELECT @log_id = MAX(lh.log_id) FROM log_headlog lh
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'начали. параметры: ' + @table  + ', ' + @ps_name + ', ' + @ps_colname , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г­Г Г·Г Г«ГЁ. ГЇГ Г°Г Г¬ГҐГІГ°Г»: ' + @table  + ', ' + @ps_name + ', ' + @ps_colname , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -837,7 +837,7 @@ END
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'закончили', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г§Г ГЄГ®Г­Г·ГЁГ«ГЁ', OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -904,7 +904,7 @@ SELECT @log_id = MAX(lh.log_id) FROM log_headlog lh
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'начали. параметры: ' + @table  + ', ' + @ps_name + ', ' + @ps_colname , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г­Г Г·Г Г«ГЁ. ГЇГ Г°Г Г¬ГҐГІГ°Г»: ' + @table  + ', ' + @ps_name + ', ' + @ps_colname , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -957,7 +957,7 @@ EXEC (@tblcr)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'создали темповую таблицу ' + @table_tmp, OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г±Г®Г§Г¤Г Г«ГЁ ГІГҐГ¬ГЇГ®ГўГіГѕ ГІГ ГЎГ«ГЁГ¶Гі ' + @table_tmp, OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1138,7 +1138,7 @@ END
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'конец', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'ГЄГ®Г­ГҐГ¶', OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1249,7 +1249,7 @@ SELECT @log_id = MAX(lh.log_id) FROM log_headlog lh
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'начали. параметры: ' + @pf + ', ' 
+	VALUES (@log_id, 'Г­Г Г·Г Г«ГЁ. ГЇГ Г°Г Г¬ГҐГІГ°Г»: ' + @pf + ', ' 
 									       + @ps  + ', '
 										   + cast(@pt_number_cur as nvarchar(12)) + ', ' 
 										   + cast(@pt_number_left as nvarchar(12)) + ', ' 
@@ -1325,7 +1325,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 		--log
 		-----
 		INSERT INTO log_sublog (log_id, comment, procname)
-			VALUES (@log_id, 'свичнули: ' + @sql, OBJECT_NAME(@@procid))
+			VALUES (@log_id, 'Г±ГўГЁГ·Г­ГіГ«ГЁ: ' + @sql, OBJECT_NAME(@@procid))
 		-----
 		--log
 		-----
@@ -1336,7 +1336,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'свичнули таблицы' , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г±ГўГЁГ·Г­ГіГ«ГЁ ГІГ ГЎГ«ГЁГ¶Г»' , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1357,7 +1357,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'мерджнули: ' + @sql, OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г¬ГҐГ°Г¤Г¦Г­ГіГ«ГЁ: ' + @sql, OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1379,7 +1379,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'сплитанули: ' + @sql, OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г±ГЇГ«ГЁГІГ Г­ГіГ«ГЁ: ' + @sql, OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1390,7 +1390,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'перестраиваем темповые таблицы на MDWH_RAW_HISTORY', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'ГЇГҐГ°ГҐГ±ГІГ°Г ГЁГўГ ГҐГ¬ ГІГҐГ¬ГЇГ®ГўГ»ГҐ ГІГ ГЎГ«ГЁГ¶Г» Г­Г  MDWH_RAW_HISTORY', OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1488,7 +1488,7 @@ SELECT * FROM #tbls_to_recreate
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'перестроили ' , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'ГЇГҐГ°ГҐГ±ГІГ°Г®ГЁГ«ГЁ ' , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1499,7 +1499,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'создаем констрейнты ' , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г±Г®Г§Г¤Г ГҐГ¬ ГЄГ®Г­Г±ГІГ°ГҐГ©Г­ГІГ» ' , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1582,7 +1582,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'создали ' , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г±Г®Г§Г¤Г Г«ГЁ ' , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1619,7 +1619,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'свичнули обратно в ' + @tbl, OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г±ГўГЁГ·Г­ГіГ«ГЁ Г®ГЎГ°Г ГІГ­Г® Гў ' + @tbl, OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1640,7 +1640,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'конец ' , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'ГЄГ®Г­ГҐГ¶ ' , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1701,7 +1701,7 @@ SELECT @log_id = MAX(lh.log_id) FROM log_headlog lh
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'начали. параметры: ' + @table_tmp  + ', ' + @ps_TMP  , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г­Г Г·Г Г«ГЁ. ГЇГ Г°Г Г¬ГҐГІГ°Г»: ' + @table_tmp  + ', ' + @ps_TMP  , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1916,7 +1916,7 @@ END
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'конец', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'ГЄГ®Г­ГҐГ¶', OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -1986,7 +1986,7 @@ SELECT @log_id = MAX(lh.log_id) FROM log_headlog lh
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'начали. параметры: ' + @table  + ', ' + @ps_name  , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г­Г Г·Г Г«ГЁ. ГЇГ Г°Г Г¬ГҐГІГ°Г»: ' + @table  + ', ' + @ps_name  , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -2182,7 +2182,7 @@ END
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'конец', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'ГЄГ®Г­ГҐГ¶', OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -2243,7 +2243,7 @@ SELECT @log_id = MAX(lh.log_id) FROM log_headlog lh
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'начали. параметры: ' + @table_tmp  + ', ' + @ps_TMP  , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г­Г Г·Г Г«ГЁ. ГЇГ Г°Г Г¬ГҐГІГ°Г»: ' + @table_tmp  + ', ' + @ps_TMP  , OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -2448,7 +2448,7 @@ ORDER BY si.index_id
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'конец', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'ГЄГ®Г­ГҐГ¶', OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -2630,14 +2630,14 @@ SELECT @log_id = MAX(lh.log_id) FROM log_headlog lh
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'начали. параметры: ' + @pf + ', ' + @ps , OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г­Г Г·Г Г«ГЁ. ГЇГ Г°Г Г¬ГҐГІГ°Г»: ' + @pf + ', ' + @ps , OBJECT_NAME(@@procid))
 -----
 --log
 -----
 
 
 
-	-- создадим темповую функцию, для datetime2 точность захардкодил в зависимости от имени функции
+	-- Г±Г®Г§Г¤Г Г¤ГЁГ¬ ГІГҐГ¬ГЇГ®ГўГіГѕ ГґГіГ­ГЄГ¶ГЁГѕ, Г¤Г«Гї datetime2 ГІГ®Г·Г­Г®Г±ГІГј Г§Г ГµГ Г°Г¤ГЄГ®Г¤ГЁГ« Гў Г§Г ГўГЁГ±ГЁГ¬Г®Г±ГІГЁ Г®ГІ ГЁГ¬ГҐГ­ГЁ ГґГіГ­ГЄГ¶ГЁГЁ
 
 	SELECT
 		@sql =
@@ -2699,13 +2699,13 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'создали темповую функцию ' + @pf + '_TMP', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г±Г®Г§Г¤Г Г«ГЁ ГІГҐГ¬ГЇГ®ГўГіГѕ ГґГіГ­ГЄГ¶ГЁГѕ ' + @pf + '_TMP', OBJECT_NAME(@@procid))
 -----
 --log
 -----
 
 
-	-- создадим темповую схему
+	-- Г±Г®Г§Г¤Г Г¤ГЁГ¬ ГІГҐГ¬ГЇГ®ГўГіГѕ Г±ГµГҐГ¬Гі
 	SELECT
 		@sql =
 		N'CREATE PARTITION SCHEME ' + QUOTENAME(@l_ps)
@@ -2744,7 +2744,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'создали темповую схему ' + @ps + '_TMP', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'Г±Г®Г§Г¤Г Г«ГЁ ГІГҐГ¬ГЇГ®ГўГіГѕ Г±ГµГҐГ¬Гі ' + @ps + '_TMP', OBJECT_NAME(@@procid))
 -----
 --log
 -----
@@ -2755,7 +2755,7 @@ INSERT INTO log_sublog (log_id, comment, procname)
 --log
 -----
 INSERT INTO log_sublog (log_id, comment, procname)
-	VALUES (@log_id, 'конец', OBJECT_NAME(@@procid))
+	VALUES (@log_id, 'ГЄГ®Г­ГҐГ¶', OBJECT_NAME(@@procid))
 -----
 --log
 -----
